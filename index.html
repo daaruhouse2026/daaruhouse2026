@@ -123,61 +123,120 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <div class="section-header">
-      <span class="section-label">✦ Find Us ✦</span>
-      <h2 class="section-title">Visit DAARU HOUSE</h2>
-      <p class="section-desc">We're waiting to welcome you with open arms and hot biryani</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Get in Touch</h3>
-        <a href="tel:+66000000000" class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <div class="contact-label">Phone</div>
-            <div class="contact-val">+66 000 000 000</div>
-          </div>
-        </a>
-        <a href="https://wa.me/66000000000" class="contact-item" target="_blank">
-          <div class="contact-icon">💬</div>
-          <div>
-            <div class="contact-label">WhatsApp</div>
-            <div class="contact-val">+66 000 000 000</div>
-          </div>
-        </a>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <div class="contact-label">Location</div>
-            <div class="contact-val">Thailand (Address TBC)</div>
-          </div>
+<!--
+  ═══════════════════════════════════════════════════════════
+  DAARU HOUSE — CONTACT SECTION REPLACEMENT
+  Replace the entire <section id="contact">...</section>
+  in index.html with this block.
+  ═══════════════════════════════════════════════════════════
+-->
+
+<!-- Contact / Get in Touch -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-label">✦ Get In Touch ✦</span>
+    <h2 class="section-title">Send Us a Message</h2>
+    <p class="section-desc">Questions, reservations, or feedback — we'd love to hear from you</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- LEFT: Info Cards -->
+   <!--- <div class="contact-info">
+      <h3>Reach Us</h3>
+
+      <a href="tel:+66000000000" class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-val">+66 000 000 000</div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
-          <div>
-            <div class="contact-label">Hours</div>
-            <div class="contact-val">Daily 8:00 AM – 10:00 PM</div>
-          </div>
+      </a>
+
+      <a href="https://wa.me/66000000000" class="contact-item" target="_blank">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-val">+66 000 000 000</div>
         </div>
-        <div class="social-links">
-          <a href="#" class="social-btn" title="Facebook">📘</a>
-          <a href="#" class="social-btn" title="Instagram">📷</a>
-          <a href="https://wa.me/66000000000" class="social-btn" title="WhatsApp" target="_blank">💬</a>
-          <a href="#" class="social-btn" title="Google Maps">🗺</a>
+      </a>
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">Thailand (Address TBC)</div>
         </div>
       </div>
-      <div class="map-placeholder">
-        <div class="map-icon">📍</div>
-        <h4>DAARU HOUSE</h4>
-        <p>Authentic Hyderabadi Restaurant<br>Thailand</p>
-        <button class="btn-primary" style="margin-top:16px"
-          onclick="alert('Google Maps integration coming soon!')">
-          View on Google Maps
+
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-label">Hours</div>
+          <div class="contact-val">Daily 8:00 AM – 10:00 PM</div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-btn" title="Facebook">📘</a>
+        <a href="#" class="social-btn" title="Instagram">📷</a>
+        <a href="https://wa.me/66000000000" class="social-btn" title="WhatsApp" target="_blank">💬</a>
+        <a href="#" class="social-btn" title="Google Maps">🗺</a>
+      </div>
+    </div>-->
+
+    <!-- RIGHT: Mail Form -->
+    <div class="mail-form-card">
+      <div class="mail-form-header">
+        <div class="mail-form-icon">✉️</div>
+        <div>
+          <div class="mail-form-title">Send a Message</div>
+          <div class="mail-form-sub">We'll reply within 24 hours</div>
+        </div>
+      </div>
+
+      <div class="mail-form-body">
+        <div class="mf-row">
+          <div class="mf-group">
+            <label class="mf-label">Your Name *</label>
+            <input type="text" class="mf-input" id="contactName" placeholder="Full name" />
+          </div>
+          <div class="mf-group">
+            <label class="mf-label">Email Address *</label>
+            <input type="email" class="mf-input" id="contactEmail" placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="mf-group">
+          <label class="mf-label">Subject</label>
+          <select class="mf-input mf-select" id="contactSubject">
+            <option value="">Select a subject…</option>
+            <option value="reservation">Table Reservation</option>
+            <option value="order">Order Enquiry</option>
+            <option value="catering">Catering / Event</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="mf-group">
+          <label class="mf-label">Message *</label>
+          <textarea class="mf-input mf-textarea" id="contactMessage"
+                    placeholder="Tell us how we can help you…"></textarea>
+        </div>
+
+        <button class="btn-primary mf-send-btn" onclick="sendContactMail()">
+          ✦ Send Message
         </button>
+
+        <div class="mf-success" id="mfSuccess">
+          🎉 Thank you! Your message has been sent. We'll get back to you soon.
+        </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>

@@ -197,31 +197,33 @@ if (activeFilter !== "All Items") {
     `;
   }).join('');
 }*/
+ 
 function filterMenu() {
   const query = document.getElementById('menuSearch').value.trim().toLowerCase();
-
   let items = MENU_DATA;
-
+ 
+  // Apply category filter FIRST (always active unless "All Items")
+  if (activeFilter !== "All Items") {
+    items = items.filter(i => i.cat === activeFilter);
+  }
+ 
+  // Then narrow further with the search query if one exists
   if (query) {
     items = items.filter(i =>
       i.name.toLowerCase().includes(query) ||
       i.cat.toLowerCase().includes(query)
     );
   }
-  else if (activeFilter !== "All Items") {
-    items = items.filter(i => i.cat === activeFilter);
-  }
-
-  // 👇 Ee kinda code ni marchaku
+ 
   const categories = [...new Set(items.map(i => i.cat))];
   const menuContent = document.getElementById('menuContent');
-
+ 
   if (!items.length) {
     menuContent.innerHTML =
-      '<div class="no-results">🍽 No dishes found.</div>';
+      '<div class="no-results">🍽 No dishes found. Try a different search or filter.</div>';
     return;
   }
-
+ 
   menuContent.innerHTML = categories.map(cat => {
     const catItems = items.filter(i => i.cat === cat);
     return `
@@ -446,4 +448,47 @@ function toggleTheme() {
 
 function toggleMobileMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+
+
+
+/* ── FIX 2: Add sendContactMail() to Section 11 ─────────── */
+ 
+function sendContactMail() {
+  const name    = document.getElementById('contactName').value.trim();
+  const email   = document.getElementById('contactEmail').value.trim();
+  const subject = document.getElementById('contactSubject').value;
+  const message = document.getElementById('contactMessage').value.trim();
+ 
+  if (!name) { showToast('Please enter your name'); return; }
+  if (!email || !email.includes('@')) { showToast('Please enter a valid email'); return; }
+  if (!message) { showToast('Please enter your message'); return; }
+ 
+  // Build a mailto: link so the device's mail client opens pre-filled
+  const subjectLine = subject
+    ? encodeURIComponent('[DAARU HOUSE] ' + document.getElementById('contactSubject').options[document.getElementById('contactSubject').selectedIndex].text)
+    : encodeURIComponent('[DAARU HOUSE] Customer Enquiry');
+ 
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n\n' +
+    message
+  );
+ 
+  const mailtoLink = 'mailto:daaruhouse@gmail.com?subject=' + subjectLine + '&body=' + body;
+  window.location.href = mailtoLink;
+ 
+  // Show success banner
+  const successEl = document.getElementById('mfSuccess');
+  if (successEl) {
+    successEl.classList.add('show');
+    setTimeout(() => successEl.classList.remove('show'), 6000);
+  }
+ 
+  // Reset form
+  document.getElementById('contactName').value    = '';
+  document.getElementById('contactEmail').value   = '';
+  document.getElementById('contactSubject').value = '';
+  document.getElementById('contactMessage').value = '';
 }

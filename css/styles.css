@@ -375,6 +375,7 @@ section { padding: 80px 24px; }
 .contact-grid {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  display: flex; align-items: center; justify-content: center;
 }
 .contact-info h3 { font-family: 'Cinzel', serif; font-size: 24px; color: var(--maroon); margin-bottom: 24px; }
 .contact-item {
@@ -765,6 +766,159 @@ footer::before {
   font-family: 'Cinzel', serif; letter-spacing: 1px; position: relative; z-index: 1;
 }
 
+
+/*
+  ═══════════════════════════════════════════════════════════
+  DAARU HOUSE — ADD THESE STYLES to your css/styles.css
+  (paste anywhere after your existing .contact-grid rules)
+  ═══════════════════════════════════════════════════════════
+*/
+
+/* ── Mail Form Card ───────────────────────────────────────── */
+.mail-form-card {
+  background: linear-gradient(135deg, rgba(212,175,55,0.06) 0%, rgba(0,0,0,0) 60%),
+              rgba(255,255,255,0.03);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(4px);
+}
+
+.mail-form-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(212,175,55,0.18);
+}
+
+.mail-form-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.mail-form-title {
+  font-family: 'Cinzel', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.mail-form-sub {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.mf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .mf-row { grid-template-columns: 1fr; }
+}
+
+.mf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.mf-label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mf-input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.22);
+  border-radius: 8px;
+  padding: 11px 14px;
+  color: var(--text);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mf-input::placeholder {
+  color: rgba(255,255,255,0.28);
+  font-style: italic;
+}
+
+.mf-input:focus {
+  border-color: var(--gold);
+  background: rgba(212,175,55,0.06);
+}
+
+.mf-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D4AF37' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.mf-select option {
+  background: #1a1008;
+  color: var(--text);
+}
+
+.mf-textarea {
+  resize: vertical;
+  min-height: 110px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mf-send-btn {
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 4px;
+  letter-spacing: 0.1em;
+}
+
+.mf-success {
+  display: none;
+  margin-top: 16px;
+  padding: 13px 18px;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.35);
+  border-radius: 8px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.mf-success.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ===== 17. ANIMATIONS ===== */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -827,3 +981,4 @@ footer::before {
   .footer-nav-row     { gap: 20px; }
   .footer-top-title   { font-size: 16px; letter-spacing: 2px; }
 }
+
