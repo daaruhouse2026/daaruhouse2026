@@ -197,21 +197,22 @@ if (activeFilter !== "All Items") {
     `;
   }).join('');
 }*/
-
 function filterMenu() {
-  const query = document.getElementById('menuSearch').value.toLowerCase();
+  const query = document.getElementById('menuSearch').value.trim().toLowerCase();
 
-  // Search always from all items
-  let items = MENU_DATA.filter(i =>
-    i.name.toLowerCase().includes(query) ||
-    i.cat.toLowerCase().includes(query)
-  );
+  let items = MENU_DATA;
 
-  // Category filter apply only if no search text
-  if (!query && activeFilter !== "All Items") {
+  if (query) {
+    items = items.filter(i =>
+      i.name.toLowerCase().includes(query) ||
+      i.cat.toLowerCase().includes(query)
+    );
+  }
+  else if (activeFilter !== "All Items") {
     items = items.filter(i => i.cat === activeFilter);
   }
 
+  // 👇 Ee kinda code ni marchaku
   const categories = [...new Set(items.map(i => i.cat))];
   const menuContent = document.getElementById('menuContent');
 
