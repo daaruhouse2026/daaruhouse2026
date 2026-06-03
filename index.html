@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAARU HOUSE – Authentic Hyderabadi Taste in Thailand</title>
+  <meta name="description" content="DAARU HOUSE – Authentic Hyderabadi Restaurant in Thailand. Order online, reserve a table, and explore our full menu of biryanis, curries, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="showPage('home'); return false;">
+      <div class="logo-emblem">DH</div>
+      <div class="logo-text">
+        <span class="logo-name">DAARU HOUSE</span>
+        <span class="logo-sub">Hyderabadi · Thailand</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('menu'); return false;">Menu</a></li>
+      <li><a href="#" onclick="scrollToSection('about'); return false;">About</a></li>
+      <li><a href="#" onclick="scrollToSection('contact'); return false;">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="openCart()">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home'); toggleMobileMenu(); return false;">Home</a>
+  <a href="#" onclick="showPage('menu'); toggleMobileMenu(); return false;">Menu</a>
+  <a href="#" onclick="scrollToSection('about'); toggleMobileMenu(); return false;">About</a>
+  <a href="#" onclick="scrollToSection('contact'); toggleMobileMenu(); return false;">Contact</a>
+</div>
+
+<!-- ═══════════ HOME PAGE ═══════════ -->
+<div id="homePage" class="page active">
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Est. in Thailand ✦</div>
+      <div class="hero-logo-big">DAARU HOUSE</div>
+      <div class="hero-logo-sub">Authentic Hyderabadi Restaurant</div>
+      <p class="hero-tagline">"Authentic <span>Hyderabadi Taste</span> in Thailand"</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary" onclick="showPage('menu'); return false;">🍽 View Menu</a>
+        <a href="#" class="btn-primary" onclick="showPage('menu'); return false;">🛒 Order Online</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- Featured Dishes -->
+  <section id="featured">
+    <div class="section-header">
+      <span class="section-label">✦ Chef's Selections ✦</span>
+      <h2 class="section-title">Signature Dishes</h2>
+      <p class="section-desc">The crown jewels of our kitchen, crafted with royal Hyderabadi tradition</p>
+    </div>
+    <div class="dishes-grid" id="featuredDishes"></div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="#" class="btn-primary" onclick="showPage('menu'); return false;">Explore Full Menu →</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-label">✦ Our Story ✦</span>
+      <h2 class="section-title">A Taste of Hyderabad,<br>Heart of Thailand</h2>
+      <p class="section-desc">Born from a deep love for royal Hyderabadi cuisine — unchanged, uncompromised</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card-main">🍛</div>
+        <div class="about-badge-float">
+          <div class="big">100%</div>
+          <div class="small">Authentic<br>Recipe</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2>Where Every Meal Tells a Story</h2>
+        <p>DAARU HOUSE was born from a deep love for the royal cuisine of Hyderabad — that majestic city where Mughal grandeur met Deccan tradition. We bring those 400-year-old recipes, unchanged and uncompromised, to the streets of Thailand.</p>
+        <p>Every grain of our Dum Biryani is slow-cooked in sealed pots, every masala is freshly ground, and every dish carries the soul of the Nizam's kitchens. We are more than a restaurant — we are a journey.</p>
+        <p>Family-friendly, welcoming, and filled with the aromas of saffron, cardamom, and slow-cooked love. Come hungry. Leave happy.</p>
+        <div class="about-features">
+          <div class="about-feat"><div class="about-feat-icon">🔥</div>Authentic Recipes</div>
+          <div class="about-feat"><div class="about-feat-icon">👨‍🍳</div>Hyderabadi Chefs</div>
+          <div class="about-feat"><div class="about-feat-icon">🌿</div>Fresh Ingredients</div>
+          <div class="about-feat"><div class="about-feat-icon">👨‍👩‍👧</div>Family Friendly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="section-header">
+      <span class="section-label">✦ What Guests Say ✦</span>
+      <h2 class="section-title">Stories from Our Table</h2>
+      <p class="section-desc">Memories made over meals that taste like home</p>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-label">✦ Find Us ✦</span>
+      <h2 class="section-title">Visit DAARU HOUSE</h2>
+      <p class="section-desc">We're waiting to welcome you with open arms and hot biryani</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <a href="tel:+66000000000" class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val">+66 000 000 000</div>
+          </div>
+        </a>
+        <a href="https://wa.me/66000000000" class="contact-item" target="_blank">
+          <div class="contact-icon">💬</div>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-val">+66 000 000 000</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">Thailand (Address TBC)</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Hours</div>
+            <div class="contact-val">Daily 8:00 AM – 10:00 PM</div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-btn" title="Facebook">📘</a>
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+          <a href="https://wa.me/66000000000" class="social-btn" title="WhatsApp" target="_blank">💬</a>
+          <a href="#" class="social-btn" title="Google Maps">🗺</a>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-icon">📍</div>
+        <h4>DAARU HOUSE</h4>
+        <p>Authentic Hyderabadi Restaurant<br>Thailand</p>
+        <button class="btn-primary" style="margin-top:16px"
+          onclick="alert('Google Maps integration coming soon!')">
+          View on Google Maps
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top-title">DAARU HOUSE, THAILAND</div>
+    <div class="footer-info-grid">
+      <div class="footer-info-card">
+        <div class="footer-info-icon"><span>🏠</span></div>
+        <div class="footer-info-content">
+          <h4>Address</h4>
+          <p>Thailand (Address TBC)<br>Daily 8:00 AM – 10:00 PM<br>Dine In · Takeaway · Delivery</p>
+        </div>
+      </div>
+      <div class="footer-info-divider"></div>
+      <div class="footer-info-card">
+        <div class="footer-info-icon"><span>✉️</span></div>
+        <div class="footer-info-content">
+          <h4>Email Address</h4>
+          <p>daaruhouse@gmail.com<br>Phone: +66 000 000 000<br>WhatsApp: +66 000 000 000</p>
+        </div>
+      </div>
+      <div class="footer-info-divider"></div>
+      <div class="footer-info-card">
+        <div class="footer-info-icon"><span>🍛</span></div>
+        <div class="footer-info-content">
+          <h4>About Us</h4>
+          <p>DAARU HOUSE brings authentic Hyderabadi cuisine to Thailand. We specialize in royal recipes — Biryani, Curries, and South Indian Breakfast — cooked with fresh ingredients.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mid-divider"></div>
+    <div class="footer-nav-row">
+      <a href="#" onclick="showPage('home');return false;">Home</a>
+      <a href="#" onclick="showPage('menu');return false;">Our Menu</a>
+      <a href="#" onclick="scrollToSection('about');return false;">About Us</a>
+      <a href="#" onclick="scrollToSection('contact');return false;">Contact Us</a>
+    </div>
+    <div class="footer-social-row">
+      <a href="#" class="footer-social-btn" title="Facebook">📘</a>
+      <a href="#" class="footer-social-btn" title="Instagram">📷</a>
+      <a href="https://wa.me/66000000000" class="footer-social-btn" title="WhatsApp" target="_blank">💬</a>
+      <a href="#" class="footer-social-btn" title="Google Maps">🗺</a>
+    </div>
+    <div class="footer-bottom">
+      © 2025 DAARU HOUSE — All Rights Reserved · Authentic Hyderabadi Cuisine · Thailand
+    </div>
+  </footer>
+
+</div><!-- end #homePage -->
+
+<!-- ═══════════ MENU PAGE ═══════════ -->
+<div id="menuPage" class="page">
+  <div class="menu-hero">
+    <h1>Our Menu</h1>
+    <p>Royal Recipes from the Kitchens of Hyderabad</p>
+  </div>
+  <div class="menu-controls">
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="menuSearch"
+             placeholder="Search biryani, chicken, paneer, dosa..."
+             oninput="filterMenu()">
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="filter-scroll" id="filterBtns"></div>
+  </div>
+  <div class="menu-content" id="menuContent"></div>
+</div>
+
+<!-- ═══════════ CHECKOUT PAGE ═══════════ -->
+<div id="checkoutPage" class="page">
+  <div class="checkout-container">
+    <div class="checkout-form-section">
+      <h2>Your Details</h2>
+      <div class="form-group">
+        <label class="form-label">Customer Name *</label>
+        <input type="text" class="form-input" id="custName" placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number *</label>
+        <input type="tel" class="form-input" id="custPhone" placeholder="+66 XXX XXX XXX">
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label">Special Instructions</label>
+        <textarea class="form-textarea" id="custNotes"
+                  placeholder="Any dietary requirements, allergies, or special requests..."></textarea>
+      </div>
+      <button class="btn-primary"
+              style="width:100%;padding:16px;text-align:center;font-size:13px;"
+              onclick="proceedToPayment()">
+        Proceed to Payment →
+      </button>
+    </div>
+    <div class="checkout-summary">
+      <h2>Order Summary</h2>
+      <div id="checkoutItems"></div>
+      <div class="summary-total-row">
+        <span>Total</span>
+        <span id="checkoutTotal" style="color:var(--gold);font-size:20px"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ PAYMENT PAGE ═══════════ -->
+<div id="paymentPage" class="page">
+  <div class="payment-container">
+    <div class="section-header" style="margin-bottom:32px">
+      <span class="section-label">✦ Secure Payment ✦</span>
+      <h2 class="section-title" style="font-size:32px">Choose Payment</h2>
+    </div>
+    <div class="payment-notice">
+      <p>🏦 Thailand payment methods will be integrated later by the restaurant owner.</p>
+    </div>
+    <div class="payment-total-box">
+      <div class="payment-total-label">Amount to Pay</div>
+      <div class="payment-total-amt" id="paymentAmt">0</div>
+      <div class="payment-total-curr">Thai Baht (THB)</div>
+    </div>
+    <div class="payment-methods">
+      <div class="payment-method" onclick="selectPayment(this)">
+        <div class="pm-badge">Popular</div>
+        <div class="pm-icon">📱</div>
+        <div class="pm-name">PromptPay</div>
+        <div class="pm-desc">Scan QR to pay instantly</div>
+      </div>
+      <div class="payment-method" onclick="selectPayment(this)">
+        <div class="pm-icon">💳</div>
+        <div class="pm-name">Credit / Debit Card</div>
+        <div class="pm-desc">Visa, Mastercard, etc.</div>
+      </div>
+      <div class="payment-method" onclick="selectPayment(this)">
+        <div class="pm-icon">🏦</div>
+        <div class="pm-name">Bank Transfer</div>
+        <div class="pm-desc">Direct bank deposit</div>
+      </div>
+      <div class="payment-method" onclick="selectPayment(this)">
+        <div class="pm-icon">💵</div>
+        <div class="pm-name">Cash</div>
+        <div class="pm-desc">Pay at counter / table</div>
+      </div>
+    </div>
+    <button class="btn-pay" onclick="placeOrder()">✦ Place Order ✦</button>
+    <div style="text-align:center;margin-top:16px;">
+      <a href="#" onclick="showPage('checkout');return false;"
+         style="color:var(--text-light);font-size:13px;text-decoration:none;">
+        ← Back to Checkout
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛒 Your Order</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span>Subtotal</span><span id="cartSubtotal">0 THB</span>
+    </div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span class="cart-total-price" id="cartTotal">0 THB</span>
+    </div>
+    <button class="btn-checkout" onclick="goToCheckout()">Proceed to Checkout →</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- SUCCESS MODAL -->
+<div class="success-modal" id="successModal">
+  <div class="success-box">
+    <div class="success-icon">🎉</div>
+    <h2>Order Placed!</h2>
+    <p>Thank you! Your order has been received. Our team will confirm shortly via WhatsApp or phone call.</p>
+    <button class="btn-primary" style="margin-top:24px;" onclick="closeSuccess()">Continue Browsing</button>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
