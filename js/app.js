@@ -156,13 +156,16 @@ function renderMenu() {
   filterMenu();
 }
 
+
+/*
 function filterMenu() {
   const query = document.getElementById('menuSearch').value.toLowerCase();
   let items = MENU_DATA;
 
   // Apply category / veg filter
- 
-
+if (activeFilter !== "All Items") {
+  items = items.filter(i => i.cat === activeFilter);
+}
   // Apply search query
   if (query) {
     items = items.filter(i =>
@@ -176,6 +179,45 @@ function filterMenu() {
 
   if (!items.length) {
     menuContent.innerHTML = '<div class="no-results">🍽 No dishes found. Try a different search.</div>';
+    return;
+  }
+
+  menuContent.innerHTML = categories.map(cat => {
+    const catItems = items.filter(i => i.cat === cat);
+    return `
+      <div class="menu-category">
+        <div class="cat-header">
+          <h3 class="cat-title">${cat}</h3>
+          <div class="cat-line"></div>
+        </div>
+        <div class="menu-items-grid">
+          ${catItems.map(item => renderMenuCard(item)).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+}*/
+
+function filterMenu() {
+  const query = document.getElementById('menuSearch').value.toLowerCase();
+
+  // Search always from all items
+  let items = MENU_DATA.filter(i =>
+    i.name.toLowerCase().includes(query) ||
+    i.cat.toLowerCase().includes(query)
+  );
+
+  // Category filter apply only if no search text
+  if (!query && activeFilter !== "All Items") {
+    items = items.filter(i => i.cat === activeFilter);
+  }
+
+  const categories = [...new Set(items.map(i => i.cat))];
+  const menuContent = document.getElementById('menuContent');
+
+  if (!items.length) {
+    menuContent.innerHTML =
+      '<div class="no-results">🍽 No dishes found.</div>';
     return;
   }
 
