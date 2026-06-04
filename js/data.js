@@ -27,7 +27,7 @@ const MENU_DATA = [
   { id: 19, name: "Dal Khichdi",                 price: 130, cat: "Breakfast", veg: true,  emoji: "🍛" ,image:"images/menu/breakFast/dalKhichdi.jpg"},
 
   // ── Veg Starters ────────────────────────────────────────
-  { id: 20, name: "Onion Pakoda",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🧅",image:"images/menu/VegStarters/OnionPakoda.jpg" },
+  { id: 20, name: "Onion Pakoda",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🧅",image:"images/menu/vegStarters/OnionPakoda.jpg" },
   { id: 21, name: "French Fries",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🍟" ,image:"images/menu/vegStarters/FrenchFries.jpg"},
   { id: 22, name: "Fry Peanut Masala",           price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🥜",image:"images/menu/vegStarters/FryPeanutMasala.jpg" },
   { id: 23, name: "Boiled Peanut Masala",        price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🥜",image:"images/menu/vegStarters/BoiledPeanutMasala.jpg" },
