@@ -18,7 +18,7 @@ const MENU_DATA = [
   { id: 10, name: "Masala Dosa",                 price: 120, cat: "Breakfast", veg: true,  emoji: "🥞" ,image:"images/menu/breakFast/masalaDosa.jpg"},
   { id: 11, name: "Onion Dosa",                  price: 120, cat: "Breakfast", veg: true,  emoji: "🥞" ,image:"images/menu/breakFast/onionDosa.jpg"},
   { id: 12, name: "Egg Dosa",                    price: 120, cat: "Breakfast", veg: false, emoji: "🥚" ,image:"images/menu/breakFast/eggDosa.jpg"},
-  { id: 13, name: "Chicken Keema Dosa",          price: 160, cat: "Breakfast", veg: false, emoji: "🥞" ,image:"images/menu/breakFast/chickenKeemaDosa.jpg"},
+  { id: 13, name: "Chicken Keema Dosa",          price: 160, cat: "Breakfast", veg: false, emoji: "🥞" ,image:"images/menu/breakFast/ChickenKeemaDosa.jpg"},
   { id: 14, name: "Upma Dosa",                   price: 120, cat: "Breakfast", veg: true,  emoji: "🥞" ,image:"images/menu/breakFast/upmaDosa.jpeg"},
   { id: 15, name: "Onion Uttapam",               price: 120, cat: "Breakfast", veg: true,  emoji: "🥞" ,image:"images/menu/breakFast/onionUttapam.jpg"},
   { id: 16, name: "Lemon Rice",                  price: 140, cat: "Breakfast", veg: true,  emoji: "🍋" ,image:"images/menu/breakFast/lemonRice.jpg"},
