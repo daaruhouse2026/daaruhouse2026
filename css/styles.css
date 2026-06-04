@@ -135,15 +135,15 @@ nav.scrolled {
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(107,26,26,0.7) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(74,14,14,0.85) 0%, rgba(26,8,0,0.9) 100%),
+  radial-gradient(ellipse at 20% 50%, rgba(107,26,26,0.7) 0%, transparent 60%),
+  linear-gradient(180deg, rgba(74,14,14,0.3) 0%, rgba(26,8,0,0.9) 100%),
     url('../images/homePagePc.png') center/cover no-repeat;
 }
 @media (max-width: 600px) {
   .hero-bg {
     background:
       radial-gradient(ellipse at 20% 50%, rgba(107,26,26,0.7) 0%, transparent 60%),
-      linear-gradient(180deg, rgba(74,14,14,0.85) 0%, rgba(26,8,0,0.9) 100%),
+      linear-gradient(180deg, rgba(74,14,14,0.3) 0%, rgba(26,8,0,0.9) 100%),
       url('../images/homePageMobile.png') center/cover no-repeat;
   }
 }
@@ -457,6 +457,7 @@ section { padding: 80px 24px; }
   border-radius: 30px; font-family: 'Cinzel', serif;
   font-size: 11px; letter-spacing: 1px; color: var(--text-mid);
   cursor: pointer; transition: all 0.3s; white-space: nowrap;
+  font-weight: 700;
 }
 .filter-btn:hover, .filter-btn.active {
   background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
@@ -752,13 +753,17 @@ footer::before {
   margin-bottom: 28px; position: relative; z-index: 1;
 }
 .footer-social-btn {
-  width: 38px; height: 38px; border-radius: 50%;
-  border: 1px solid rgba(200,151,42,0.3);
+  width: 50px; height: 50px; border-radius: 50%;
+  border: 1px solid white;
   display: flex; align-items: center; justify-content: center;
   font-size: 16px; text-decoration: none;
   transition: all 0.3s; background: rgba(200,151,42,0.06);
 }
-.footer-social-btn:hover { background: rgba(200,151,42,0.18); border-color: var(--gold); transform: translateY(-3px); }
+.footer-instagram{
+  color: white;
+  font-size: 25px;
+}
+.footer-social-btn:hover {  border-color: white; transform: translateY(-3px); }
 .footer-bottom {
   border-top: 1px solid rgba(200,151,42,0.1);
   padding-top: 20px; text-align: center;
@@ -872,10 +877,12 @@ footer::before {
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 36px;
+  
+
 }
 
 .mf-select option {
-  background: #1a1008;
+  background-color: rgba(255,255,255,0.28);
   color: var(--text);
 }
 
@@ -912,6 +919,10 @@ footer::before {
 
 .mf-success.show {
   display: block;
+}
+.footer-email{
+  color:white;
+  text-decoration:none;
 }
 
 @keyframes fadeIn {
