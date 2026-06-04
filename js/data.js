@@ -27,17 +27,17 @@ const MENU_DATA = [
   { id: 19, name: "Dal Khichdi",                 price: 130, cat: "Breakfast", veg: true,  emoji: "🍛" ,image:"images/menu/breakFast/dalKhichdi.jpg"},
 
   // ── Veg Starters ────────────────────────────────────────
-  { id: 20, name: "Onion Pakoda",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🧅",image:"images/menu/vegStarters/OnionPakoda.jpg" },
-  { id: 21, name: "French Fries",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🍟" ,image:"images/menu/vegStarters/FrenchFries.jpg"},
-  { id: 22, name: "Fry Peanut Masala",           price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🥜",image:"images/menu/vegStarters/FryPeanutMasala.jpg" },
-  { id: 23, name: "Boiled Peanut Masala",        price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🥜",image:"images/menu/vegStarters/BoiledPeanutMasala.jpg" },
-  { id: 24, name: "Veg Manchuria",               price: 150, cat: "Veg-Starters",  veg: true,  emoji: "🥦" ,image:"images/menu/vegStarters/VegManchuria.jpg"},
-  { id: 25, name: "Gobi Manchuria",              price: 170, cat: "Veg-Starters",  veg: true,  emoji: "🥦" ,image:"images/menu/vegStarters/GobiManchuria.jpeg"},
-  { id: 26, name: "Crispy Baby Corn",            price: 150, cat: "Veg-Starters",  veg: true,  emoji: "🌽" ,image:"images/menu/vegStarters/CrispyBabyCorn.jpg"},
-  { id: 27, name: "Chilli Paneer",               price: 180, cat: "Veg-Starters",  veg: true,  emoji: "🧀" ,image:"images/menu/vegStarters/ChilliPaneer.jpg"},
-  { id: 28, name: "Paneer Pakoda",               price: 180, cat: "Veg-Starters",  veg: true,  emoji: "🧀" ,image:"images/menu/vegStarters/PaneerPakoda.jpg"},
-  { id: 29, name: "Roasted Papad (2 pcs)",       price: 20,  cat: "Veg-Starters",  veg: true,  emoji: "🫓" ,image:"images/menu/vegStarters/RoastedPapad.jpg"},
-  { id: 30, name: "Masala Papad (2 pcs)",        price: 50,  cat: "Veg-Starters",  veg: true,  emoji: "🫓" ,image:"images/menu/vegStarters/MasalaPapad.jpg"},
+  { id: 20, name: "Onion Pakoda",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🧅",image:"images/menu/VegStarters/OnionPakoda.jpg" },
+  { id: 21, name: "French Fries",                price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🍟" ,image:"images/menu/VegStarters/FrenchFries.jpg"},
+  { id: 22, name: "Fry Peanut Masala",           price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🥜",image:"images/menu/VegStarters/FryPeanutMasala.jpg" },
+  { id: 23, name: "Boiled Peanut Masala",        price: 100, cat: "Veg-Starters",  veg: true,  emoji: "🥜",image:"images/menu/VegStarters/BoiledPeanutMasala.jpg" },
+  { id: 24, name: "Veg Manchuria",               price: 150, cat: "Veg-Starters",  veg: true,  emoji: "🥦" ,image:"images/menu/VegStarters/VegManchuria.jpg"},
+  { id: 25, name: "Gobi Manchuria",              price: 170, cat: "Veg-Starters",  veg: true,  emoji: "🥦" ,image:"images/menu/VegStarters/GobiManchuria.jpeg"},
+  { id: 26, name: "Crispy Baby Corn",            price: 150, cat: "Veg-Starters",  veg: true,  emoji: "🌽" ,image:"images/menu/VegStarters/CrispyBabyCorn.jpg"},
+  { id: 27, name: "Chilli Paneer",               price: 180, cat: "Veg-Starters",  veg: true,  emoji: "🧀" ,image:"images/menu/VegStarters/ChilliPaneer.jpg"},
+  { id: 28, name: "Paneer Pakoda",               price: 180, cat: "Veg-Starters",  veg: true,  emoji: "🧀" ,image:"images/menu/VegStarters/PaneerPakoda.jpg"},
+  { id: 29, name: "Roasted Papad (2 pcs)",       price: 20,  cat: "Veg-Starters",  veg: true,  emoji: "🫓" ,image:"images/menu/VegStarters/RoastedPapad.jpg"},
+  { id: 30, name: "Masala Papad (2 pcs)",        price: 50,  cat: "Veg-Starters",  veg: true,  emoji: "🫓" ,image:"images/menu/VegStarters/MasalaPapad.jpg"},
 
   // ── Non-Veg Starters ────────────────────────────────────
   { id: 31, name: "Boiled Egg (2 pcs)",          price: 40,  cat: "Non-Veg-Starters",  veg: false, emoji: "🥚" ,image:"images/menu/Non-VegStarters/BoiledEgg.jpg"},
